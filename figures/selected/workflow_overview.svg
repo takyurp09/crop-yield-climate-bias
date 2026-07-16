@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="520" viewBox="0 0 1280 520" role="img" aria-labelledby="title desc">
+  <title id="title">Crop yield climate bias-adjustment workflow</title>
+  <desc id="desc">Workflow connecting ERA5, raw CMIP6, bias-adjusted CMIP6, crop calendars, harvested area, EDD metrics, and spatial diagnostics.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8f7f2; }
+      .box { fill: #ffffff; stroke: #c9cdc5; stroke-width: 2; rx: 8; }
+      .box2 { fill: #eef5f7; stroke: #8eafbd; stroke-width: 2; rx: 8; }
+      .title { font: 700 30px Arial, sans-serif; fill: #1d2528; }
+      .step { font: 700 18px Arial, sans-serif; fill: #1d2528; }
+      .text { font: 15px Arial, sans-serif; fill: #465055; }
+      .small { font: 13px Arial, sans-serif; fill: #667075; }
+      .arrow { stroke: #53656b; stroke-width: 4; marker-end: url(#arrowhead); fill: none; }
+      .blue { fill: #3f7fa6; }
+      .green { fill: #668d55; }
+      .gold { fill: #d1a24a; }
+      .red { fill: #b94b45; }
+      .tag { fill: #edf0e7; stroke: #aab59d; stroke-width: 1.5; rx: 14; }
+      .tagtext { font: 700 13px Arial, sans-serif; fill: #3d5037; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#53656b"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1280" height="520"/>
+  <text class="title" x="48" y="58">Crop-Relevant Climate Bias-Adjustment Pipeline</text>
+  <text class="text" x="48" y="88">Portfolio workflow for large climate archives, crop calendars, harvested-area weights, and extreme-degree-day diagnostics.</text>
+
+  <rect class="box" x="48" y="132" width="185" height="170"/>
+  <circle class="blue" cx="96" cy="172" r="22"/>
+  <path d="M78 172 C88 157, 104 157, 114 172 C104 187, 88 187, 78 172 Z" fill="#ffffff" opacity="0.85"/>
+  <text class="step" x="76" y="222">1. Climate Data</text>
+  <text class="text" x="76" y="248">ERA5 + CMIP6</text>
+  <text class="small" x="76" y="272">Cloud archive access</text>
+
+  <rect class="box" x="278" y="132" width="185" height="170"/>
+  <rect class="green" x="326" y="154" width="48" height="50" rx="5"/>
+  <path d="M326 184 C338 174, 352 192, 374 176 L374 204 L326 204 Z" fill="#e2ead9"/>
+  <text class="step" x="306" y="222">2. Crop Windows</text>
+  <text class="text" x="306" y="248">Calendar alignment</text>
+  <text class="small" x="306" y="272">Plant, between, harvest</text>
+
+  <rect class="box" x="508" y="132" width="185" height="170"/>
+  <path d="M550 194 L570 154 L590 194 L610 154 L630 194" stroke="#d1a24a" stroke-width="7" fill="none"/>
+  <text class="step" x="536" y="222">3. EDD Metrics</text>
+  <text class="text" x="536" y="248">Extreme heat exposure</text>
+  <text class="small" x="536" y="272">Threshold and tail metrics</text>
+
+  <rect class="box" x="738" y="132" width="185" height="170"/>
+  <rect class="red" x="780" y="158" width="24" height="36"/>
+  <rect class="blue" x="812" y="146" width="24" height="48"/>
+  <rect class="gold" x="844" y="170" width="24" height="24"/>
+  <text class="step" x="766" y="222">4. Skill Tests</text>
+  <text class="text" x="766" y="248">Bias-adjusted vs raw</text>
+  <text class="small" x="766" y="272">Benchmark against ERA5</text>
+
+  <rect class="box2" x="968" y="132" width="185" height="170"/>
+  <path d="M1008 192 C1030 150, 1068 218, 1092 160" stroke="#3f7fa6" stroke-width="6" fill="none"/>
+  <text class="step" x="996" y="222">5. Diagnostics</text>
+  <text class="text" x="996" y="248">Maps + crop panels</text>
+  <text class="small" x="996" y="272">Reusable research outputs</text>
+
+  <path class="arrow" d="M238 218 L270 218"/>
+  <path class="arrow" d="M468 218 L500 218"/>
+  <path class="arrow" d="M698 218 L730 218"/>
+  <path class="arrow" d="M928 218 L960 218"/>
+
+  <rect class="tag" x="100" y="352" width="128" height="34"/>
+  <text class="tagtext" x="124" y="374">ERA5</text>
+  <rect class="tag" x="260" y="352" width="128" height="34"/>
+  <text class="tagtext" x="286" y="374">CMIP6</text>
+  <rect class="tag" x="420" y="352" width="180" height="34"/>
+  <text class="tagtext" x="443" y="374">Bias adjustment</text>
+  <rect class="tag" x="632" y="352" width="160" height="34"/>
+  <text class="tagtext" x="655" y="374">Crop calendars</text>
+  <rect class="tag" x="824" y="352" width="158" height="34"/>
+  <text class="tagtext" x="848" y="374">Dask / Xarray</text>
+  <rect class="tag" x="1014" y="352" width="156" height="34"/>
+  <text class="tagtext" x="1042" y="374">R + Python</text>
+
+  <text class="small" x="48" y="456">Tracked in GitHub: code, docs, selected figures, portable environment, and reproducibility notes.</text>
+  <text class="small" x="48" y="480">Excluded from GitHub: raw climate archives, generated panels, paper files, local paths, and machine-specific environment exports.</text>
+</svg>
