@@ -1,0 +1,38 @@
+name: crop-yield-climate-bias
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - r-base>=4.2
+  - r-tidyverse
+  - r-arrow
+  - r-sf
+  - r-terra
+  - r-fixest
+  - r-modelsummary
+  - r-patchwork
+  - pandas
+  - numpy
+  - xarray
+  - netcdf4
+  - dask
+  - distributed
+  - zarr
+  - fsspec
+  - gcsfs
+  - s3fs
+  - geopandas
+  - rasterio
+  - rioxarray
+  - xesmf
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - pyarrow
+  - requests
+  - pip
+  - pip:
+      - planetary-computer
+      - pystac-client
+      - xagg
