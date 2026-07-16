@@ -1,0 +1,4 @@
+source_id,edd_bin,mean_mae,median_mae
+CNRM-CM6-1,edd_8,109.8940,60.8257
+CNRM-CM6-1-HR,edd_8,86.5529,58.4922
+EC-Earth3,edd_8,82.9410,57.1648

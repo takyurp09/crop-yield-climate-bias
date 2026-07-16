@@ -7,13 +7,14 @@
 - [x] Personal contact metadata removed
 - [x] Portable environment file added
 - [x] Selected figures reviewed for public release
+- [x] Sample tables limited to small real-data extracts, not full result tables
 - [x] Documentation explains data-access limits
 
 Recommended update workflow:
 
 ```bash
 git status
-git add README.md docs/ python_scripts/ figures/selected/
+git add README.md docs/ examples/ python_scripts/ figures/selected/
 git commit -m "Describe the specific update"
 git push
 ```

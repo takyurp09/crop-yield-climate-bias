@@ -1,0 +1,4 @@
+source_id,edd_bin,mean_dskill_mae,median_dskill_mae,sd_dskill_mae,n
+EC-Earth3,edd_8,21.9173,0.0000,129.1599,30492
+GFDL-ESM4,edd_8,55.6764,1.9752,168.1381,30492
+MPI-ESM1-2-HR,edd_8,30.1916,0.0000,135.1824,30492

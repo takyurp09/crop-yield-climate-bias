@@ -1,19 +1,53 @@
 # Crop Yield Climate Bias Adjustment
 
-This repository contains a public portfolio version of a climate-data pipeline for evaluating how raw CMIP6, bias-adjusted CMIP6, and ERA5 reanalysis differ when estimating crop-relevant extreme heat exposure.
+Large-scale climate-data workflow for evaluating raw CMIP6, bias-adjusted CMIP6, and ERA5 reanalysis in crop-relevant extreme heat exposure measurement.
 
-The workflow focuses on extreme degree days (EDD) during crop growing seasons, combining large climate archives with crop calendars, harvested-area weights, and regional agricultural units.
+This repository is a public portfolio release of a research pipeline that computes extreme degree days (EDD) during crop growing seasons, links gridded climate archives to crop calendars and harvested-area weights, and evaluates whether bias-adjusted climate products improve crop exposure measurement.
 
-## Why This Repository Matters
+## What This Demonstrates
 
-This project demonstrates research computing skills that are useful for agricultural economics, climate-risk modeling, and Earth-system data analysis:
+This project is meant to show research-computing ability in agricultural climate-risk analysis:
 
-- handling large ERA5 and CMIP6 climate archives;
-- accessing cloud-hosted climate data through ESGF, Pangeo, and Microsoft Planetary Computer workflows;
-- calculating crop-calendar-specific extreme heat metrics;
-- harmonizing gridded climate data with administrative agricultural units;
-- comparing raw and bias-adjusted model performance against ERA5;
-- building reproducible R and Python pipelines for maps, diagnostics, and tables.
+- ERA5 reanalysis and CMIP6/GCM archive processing;
+- Microsoft Planetary Computer, ESGF, and Pangeo-style data access;
+- crop-calendar-specific extreme heat exposure construction;
+- harvested-area and administrative-region aggregation;
+- comparison of raw and bias-adjusted climate products against ERA5;
+- R/Python workflow design for diagnostics, maps, tables, and reproducible research.
+
+## Workflow
+
+![Workflow overview](figures/selected/workflow_overview.svg)
+
+| Stage | Data product | Main scripts |
+|---|---|---|
+| 1. Climate access | ERA5, raw CMIP6, and bias-adjusted CMIP6 EDD inputs | `python_scripts/era5_*.py`, `python_scripts/esgf_*.py`, `python_scripts/pc_*.py` |
+| 2. Crop exposure construction | Crop-calendar EDD panels by region, crop, irrigation, and period | `01_load_harmonize.R`, `python_scripts/*_edds_calendar.py` |
+| 3. Bias-adjustment evaluation | MAE, RMSE, quantile, tail, KS, and correlation diagnostics | `02_metrics.R` |
+| 4. Spatial and crop diagnostics | Maps, crop-threshold figures, and performance matrices | `03_maps.R`, `04_plots.R` |
+| 5. Public outputs | Selected tables and communication figures | `05_generate_paper_tables.R`, `06_generate_conference_figures.R` |
+
+## Selected Visuals
+
+The public release includes selected visuals that demonstrate spatial diagnostics, crop-threshold evaluation, and workflow structure without releasing raw climate archives or full manuscript outputs.
+
+![Spatial bias-adjustment skill](figures/selected/spatial_bias_adjustment_skill.png)
+
+![Crop threshold skill diagnostic](figures/selected/crop_threshold_skill_diagnostic.png)
+
+See `docs/VISUAL_GALLERY.md` for figure notes.
+
+## Example Data Products
+
+The repository includes small real-data extracts in `examples/`. These are limited documentation samples, not a full replication dataset or final paper package.
+
+| Example file | Purpose |
+|---|---|
+| `examples/sample_dskill_summary.csv` | Model-threshold summary of bias-adjustment skill |
+| `examples/sample_crop_threshold_dskill.csv` | Crop-specific skill differences by EDD threshold |
+| `examples/sample_raw_model_mae.csv` | Raw CMIP6 model error summary against ERA5 |
+
+See `docs/SAMPLE_TABLES.md` for a readable version.
 
 ## Repository Structure
 
@@ -32,22 +66,39 @@ python_scripts/
   pc_*.py                           Bias-adjusted CMIP6 access and EDD construction
 docs/
   DATA_SOURCES.md                   Data provenance and access notes
+  METHOD_OVERVIEW.md                High-level data and evaluation design
   REPRODUCIBILITY.md                Environment and run-order notes
+  SAMPLE_TABLES.md                  Selected real-data sample tables
+  VISUAL_GALLERY.md                 Notes on selected public visuals
   PUBLIC_RELEASE_CHECKLIST.md       Safe-public-release checklist
+examples/
+  Small real-data extracts from processed summary outputs
 figures/selected/
   Selected public-facing diagnostics and workflow visual
 ```
 
-## Selected Visuals
+## Reproducibility
 
-![Spatial bias-adjustment skill](figures/selected/spatial_bias_adjustment_skill.png)
+```bash
+conda env create -f environment.yml
+conda activate crop-yield-climate-bias
+```
 
-![Workflow overview](figures/selected/workflow_overview.svg)
-
-## Data Availability
-
-Raw climate and agricultural data are not committed because the workflow depends on large external archives and provider-specific access routes. See `docs/DATA_SOURCES.md`.
+The public repository is not a turnkey replication package because raw NetCDF/Zarr archives, shapefiles, and generated panels are large and provider-specific. See `docs/REPRODUCIBILITY.md` for the suggested run order and `docs/DATA_SOURCES.md` for access notes.
 
 ## Public-Release Scope
 
-This repository excludes raw climate data, generated panels, manuscript files, submission materials, and local machine metadata. It is intended to show coding style, data-engineering choices, workflow organization, and reproducibility practice.
+Included:
+
+- curated R and Python source scripts;
+- project documentation;
+- selected public-facing visuals;
+- small real-data table extracts;
+- portable environment specification.
+
+Excluded:
+
+- raw ERA5, CMIP6, and bias-adjusted climate archives;
+- local credentials, API tokens, and machine paths;
+- generated NetCDF/Zarr/Parquet panels;
+- manuscript files, submission materials, and full result tables.

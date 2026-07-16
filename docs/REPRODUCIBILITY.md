@@ -28,3 +28,9 @@ The Python scripts require access to large climate archives. Some sources may ne
 ## Notes
 
 The public version is not a turnkey reproduction package because raw climate archives are too large for Git and require external access. The repository documents the workflow and code structure needed to reproduce the analysis once source data are configured locally.
+
+## Public Example Outputs
+
+The `examples/` directory contains small real-data extracts from processed summary outputs. These files are intentionally limited to a few rows so reviewers can see column names, units, and data-flow expectations without receiving the full unpublished dataset or result tables.
+
+The `figures/selected/` directory contains a curated set of public visuals. See `docs/VISUAL_GALLERY.md` for figure notes.
