@@ -26,6 +26,14 @@ The following examples are small real-data extracts from processed summary outpu
 | CNRM-CM6-1-HR | edd_8 | 86.5529 | 58.4922 |
 | EC-Earth3 | edd_8 | 82.9410 | 57.1648 |
 
+## Compact Public-Paper Summary
+
+| source_id | edd_0 | edd_4 | edd_8 | edd_12 | edd_28 | edd_30 | edd_32 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| EC-Earth3 | 53.2003 | 38.3423 | 21.9173 | 3.6891 | -0.7513 | 0.1361 | 0.3330 |
+| GFDL-ESM4 | 111.0130 | 84.9879 | 55.6764 | 24.2307 | -2.0362 | -1.1108 | -0.5454 |
+| MPI-ESM1-2-HR | 63.4653 | 47.8259 | 30.1916 | 11.0865 | -1.0116 | -0.2110 | 0.0932 |
+
 ## Interpretation
 
 - `edd_bin`: extreme-degree-day threshold bin.
@@ -33,3 +41,4 @@ The following examples are small real-data extracts from processed summary outpu
 - `source_id`: climate model identifier.
 - `n`: number of model-region-crop-irrigation-period-threshold records in the summarized group.
 - `mean_mae`: mean absolute error of raw CMIP6 exposure relative to ERA5.
+- Positive public-summary values indicate mean MAE improvement after bias adjustment; negative values indicate degradation.

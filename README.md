@@ -33,19 +33,22 @@ The public release includes selected visuals that demonstrate spatial diagnostic
 
 ![Spatial bias-adjustment skill](figures/selected/spatial_bias_adjustment_skill.png)
 
+![Model performance matrix](figures/selected/model_performance_matrix.png)
+
 ![Crop threshold skill diagnostic](figures/selected/crop_threshold_skill_diagnostic.png)
 
 See `docs/VISUAL_GALLERY.md` for figure notes.
 
 ## Example Data Products
 
-The repository includes small real-data extracts in `examples/`. These are limited documentation samples, not a full replication dataset or final paper package.
+The repository includes small real-data extracts in `examples/`. These are limited documentation samples, not a full replication dataset or full paper package.
 
 | Example file | Purpose |
 |---|---|
 | `examples/sample_dskill_summary.csv` | Model-threshold summary of bias-adjustment skill |
 | `examples/sample_crop_threshold_dskill.csv` | Crop-specific skill differences by EDD threshold |
 | `examples/sample_raw_model_mae.csv` | Raw CMIP6 model error summary against ERA5 |
+| `examples/sample_public_paper_summary.csv` | Compact public-paper summary table for selected model-threshold results |
 
 See `docs/SAMPLE_TABLES.md` for a readable version.
 
@@ -94,6 +97,7 @@ Included:
 - project documentation;
 - selected public-facing visuals;
 - small real-data table extracts;
+- selected public-paper outputs;
 - portable environment specification.
 
 Excluded:

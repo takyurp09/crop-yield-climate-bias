@@ -8,6 +8,7 @@
 - [x] Portable environment file added
 - [x] Selected figures reviewed for public release
 - [x] Sample tables limited to small real-data extracts, not full result tables
+- [x] Public-paper figures/tables curated rather than bulk-exported
 - [x] Documentation explains data-access limits
 
 Recommended update workflow:

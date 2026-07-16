@@ -8,11 +8,12 @@ This repository includes a small set of public-facing visuals selected to demons
 |---|---|---|
 | `figures/selected/workflow_overview.svg` | End-to-end data flow from climate archives to crop-calendar EDD panels, metrics, maps, and tables | Shows project organization and reproducible workflow design |
 | `figures/selected/spatial_bias_adjustment_skill.png` | Spatial variation in bias-adjustment performance for crop-relevant exposure | Shows geospatial diagnostic and map communication capability |
+| `figures/selected/model_performance_matrix.png` | Model-by-threshold summary of bias-adjustment skill | Provides a compact public-paper result that is easy to scan |
 | `figures/selected/crop_threshold_skill_diagnostic.png` | Bias-adjustment skill across crops and EDD thresholds | Shows crop-specific evaluation rather than generic climate-model scoring |
 
 ## Why Only Selected Visuals Are Included
 
-The full project contains additional internal diagnostics, manuscript figures, and generated outputs. Those are intentionally excluded from this public portfolio release because they may contain unpublished results or depend on large intermediate panels.
+The full project contains additional internal diagnostics and generated outputs. Because this work is publicly circulated, selected paper-style visuals are included here, while large intermediate panels and full output folders remain excluded.
 
 ## Reviewer Takeaway
 
