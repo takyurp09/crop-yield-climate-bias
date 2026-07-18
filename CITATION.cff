@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript associated with this repository."
+title: "Evaluating Bias-Adjusted Climate Data for Extreme Heat Metrics in Agricultural Applications"
+type: software
+authors:
+  - family-names: Tahmid
+    given-names: Muhammad Taky
+year: 2026
+license: MIT
+repository-code: "https://github.com/takyurp09/crop-yield-climate-bias"

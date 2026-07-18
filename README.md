@@ -1,8 +1,23 @@
 # Crop Yield Climate Bias Adjustment
 
+[![Status: Under Review](https://img.shields.io/badge/status-under%20review-1f6f8b)](#research-status)
+[![Python](https://img.shields.io/badge/Python-climate%20data-3776AB?logo=python&logoColor=white)](python_scripts/)
+[![R](https://img.shields.io/badge/R-evaluation-276DC3?logo=r)](02_metrics.R)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
+**Muhammad Taky Tahmid**
+
+This repository is the public research companion to:
+
+> Tahmid, M. T. (2026). *Evaluating Bias-Adjusted Climate Data for Extreme Heat Metrics in Agricultural Applications*. Under review at *Environmental Data Science*.
+
 Large-scale climate-data workflow for evaluating raw CMIP6, bias-adjusted CMIP6, and ERA5 reanalysis in crop-relevant extreme heat exposure measurement.
 
 This repository is a public portfolio release of a research pipeline that computes extreme degree days (EDD) during crop growing seasons, links gridded climate archives to crop calendars and harvested-area weights, and evaluates whether bias-adjusted climate products improve crop exposure measurement.
+
+## Research Question
+
+Do bias-adjusted CMIP6 products improve the measurement of crop-relevant extreme-heat exposure relative to raw climate-model output when ERA5 is used as the observational benchmark?
 
 ## What This Demonstrates
 
@@ -89,6 +104,10 @@ conda activate crop-yield-climate-bias
 
 The public repository is not a turnkey replication package because raw NetCDF/Zarr archives, shapefiles, and generated panels are large and provider-specific. See `docs/REPRODUCIBILITY.md` for the suggested run order and `docs/DATA_SOURCES.md` for access notes.
 
+## Research Status
+
+The associated manuscript is under review at *Environmental Data Science*. Repository figures and table extracts are selected public materials; they are not a complete replication or submission package.
+
 ## Public-Release Scope
 
 Included:
@@ -106,3 +125,13 @@ Excluded:
 - local credentials, API tokens, and machine paths;
 - generated NetCDF/Zarr/Parquet panels;
 - manuscript files, submission materials, and full result tables.
+
+## Citation and Contact
+
+Please cite the manuscript:
+
+> Tahmid, M. T. (2026). *Evaluating Bias-Adjusted Climate Data for Extreme Heat Metrics in Agricultural Applications*. Under review at *Environmental Data Science*.
+
+Muhammad Taky Tahmid<br>
+University of Delaware<br>
+[tahmid@udel.edu](mailto:tahmid@udel.edu)
